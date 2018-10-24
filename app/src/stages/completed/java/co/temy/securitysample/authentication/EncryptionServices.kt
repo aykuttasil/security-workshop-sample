@@ -1,10 +1,11 @@
-package co.temy.securitysample.authentication
+package java.co.temy.securitysample.authentication
 
 import android.annotation.TargetApi
 import android.content.Context
 import android.hardware.fingerprint.FingerprintManager
 import android.security.keystore.KeyPermanentlyInvalidatedException
 import android.security.keystore.UserNotAuthenticatedException
+import co.temy.securitysample.authentication.SystemServices
 import java.co.temy.securitysample.encryption.CipherWrapper
 import java.co.temy.securitysample.encryption.KeyStoreWrapper
 import java.security.InvalidKeyException

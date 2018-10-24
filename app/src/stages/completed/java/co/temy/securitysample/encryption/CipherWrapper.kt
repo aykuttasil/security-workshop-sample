@@ -65,7 +65,7 @@ class CipherWrapper(val transformation: String) {
      * is an Initialization Vector and `bbbbbb` the  data to decrypt. `false` by default.
      */
     fun decrypt(data: String, key: Key?, useInitializationVector: Boolean = false): String {
-        var encodedString: String
+        val encodedString: String
 
         if (useInitializationVector) {
             val split = data.split(IV_SEPARATOR.toRegex())

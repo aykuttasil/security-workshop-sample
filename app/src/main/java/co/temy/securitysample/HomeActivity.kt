@@ -11,7 +11,7 @@ import android.view.MenuItem
 import android.view.View
 import co.temy.securitysample.authentication.AuthenticationDialog
 import co.temy.securitysample.authentication.AuthenticationDialog.Stage.*
-import co.temy.securitysample.authentication.EncryptionServices
+import java.co.temy.securitysample.authentication.EncryptionServices
 import co.temy.securitysample.extentions.openSecuritySettings
 import co.temy.securitysample.extentions.startSecretActivity
 import co.temy.securitysample.extentions.startSignUpActivity
@@ -21,8 +21,8 @@ import kotlinx.android.synthetic.main.activity_home.*
 class HomeActivity : BaseSecureActivity() {
 
     companion object {
-        val ADD_SECRET_REQUEST_CODE = 300
-        val AUTHENTICATION_SCREEN_CODE = 301
+        const val ADD_SECRET_REQUEST_CODE = 300
+        const val AUTHENTICATION_SCREEN_CODE = 301
     }
 
     private val storage: Storage by lazy(LazyThreadSafetyMode.NONE) { Storage(applicationContext) }
@@ -157,7 +157,7 @@ class HomeActivity : BaseSecureActivity() {
 
     private fun onAddSecretClick() {
         val dialog = AuthenticationDialog()
-        dialog.stage = PASSWORD
+        dialog.stage = FINGERPRINT
 
         dialog.authenticationSuccessListener = { startSecretActivity(ADD_SECRET_REQUEST_CODE, password = it) }
         dialog.passwordVerificationListener = { validatePassword(it) }

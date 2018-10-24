@@ -23,11 +23,11 @@ class Storage constructor(context: Context) {
             val updateDate: Date) : Serializable
 
     companion object {
-        private val STORAGE_SETTINGS: String = "settings"
-        private val STORAGE_ENCRYPTION_KEY: String = "encryption_key"
-        private val STORAGE_PASSWORD: String = "password"
-        private val STORAGE_SECRETS: String = "secrets"
-        private val STORAGE_FINGERPRINT: String = "fingerprint_allowed"
+        private const val STORAGE_SETTINGS: String = "settings"
+        private const val STORAGE_ENCRYPTION_KEY: String = "encryption_key"
+        private const val STORAGE_PASSWORD: String = "password"
+        private const val STORAGE_SECRETS: String = "secrets"
+        private const val STORAGE_FINGERPRINT: String = "fingerprint_allowed"
     }
 
     init {
@@ -82,7 +82,7 @@ class Storage constructor(context: Context) {
         return secretsList
     }
 
-    fun clear(){
+    fun clear() {
         settings.edit().clear().apply()
         secrets.edit().clear().apply()
     }

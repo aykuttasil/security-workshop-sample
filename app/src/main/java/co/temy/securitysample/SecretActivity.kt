@@ -10,7 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
-import co.temy.securitysample.authentication.EncryptionServices
+import java.co.temy.securitysample.authentication.EncryptionServices
 import co.temy.securitysample.extentions.hideKeyboard
 import co.temy.securitysample.extentions.showKeyboard
 import kotlinx.android.synthetic.main.activity_add_secret.*

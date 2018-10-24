@@ -5,7 +5,7 @@ import android.support.design.widget.Snackbar
 import android.text.TextUtils
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import co.temy.securitysample.authentication.EncryptionServices
+import java.co.temy.securitysample.authentication.EncryptionServices
 import co.temy.securitysample.authentication.SystemServices
 import co.temy.securitysample.extentions.hideKeyboard
 import co.temy.securitysample.extentions.openSecuritySettings
@@ -37,7 +37,7 @@ class SignUpActivity : BaseSecureActivity() {
         if (checked && !systemServices.hasEnrolledFingerprints()) {
             allowFingerprintView.isChecked = false
             Snackbar.make(signUpRootView, R.string.sign_up_snack_message, Snackbar.LENGTH_LONG)
-                    .setAction(R.string.sign_up_snack_action, { openSecuritySettings() })
+                    .setAction(R.string.sign_up_snack_action) { openSecuritySettings() }
                     .show()
         }
     }
